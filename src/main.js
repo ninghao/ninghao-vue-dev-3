@@ -1,4 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './app/app.vue';
 
-createApp(App).mount('#app')
+/**
+ * 创建应用
+ */
+const app = createApp(App);
+
+/**
+ * 挂载应用
+ */
+app.mount('#app');

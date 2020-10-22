@@ -10,5 +10,9 @@ export default {
       appName: '宁皓网',
     };
   },
+
+  created() {
+    // console.log(this.$store);
+  },
 };
 </script>

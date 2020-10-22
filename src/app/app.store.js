@@ -1,4 +1,5 @@
 import { createStore } from 'vuex';
+import { postStoreModule } from '@/post/post.store';
 
 /**
  * 创建 Store
@@ -8,7 +9,9 @@ const store = createStore({
     appName: '宁皓网',
   },
 
-  modules: {},
+  modules: {
+    post: postStoreModule,
+  },
 });
 
 /**

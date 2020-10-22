@@ -5,8 +5,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import { apiHttpClient } from '@/app/app.service';
+import { mapGetters, mapActions } from 'vuex';
 import PostListItem from './post-list-item.vue';
 
 export default {
@@ -23,17 +22,9 @@ export default {
   },
 
   methods: {
-    async getPosts() {
-      try {
-        // 请求内容列表接口
-        const response = await apiHttpClient.get('/posts');
-
-        // 设置组件的数据
-        this.posts = response.data;
-      } catch (error) {
-        console.log(error);
-      }
-    },
+    ...mapActions({
+      getPosts: 'post/index/getPosts',
+    }),
   },
 
   components: {

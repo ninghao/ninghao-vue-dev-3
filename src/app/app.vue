@@ -14,6 +14,7 @@ export default {
   created() {
     // console.log(this.$store.getters['post/index/loading']);
     // console.log(this.$store.state.post.index.loading);
+    // this.$store.commit('post/index/setLoading', true);
   },
 };
 </script>

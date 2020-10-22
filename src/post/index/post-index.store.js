@@ -15,4 +15,14 @@ export const postIndexStoreModule = {
       return state.posts;
     },
   },
+
+  mutations: {
+    setLoading(state, data) {
+      state.loading = data;
+    },
+
+    setPosts(state, data) {
+      state.posts = data;
+    },
+  },
 };

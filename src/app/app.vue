@@ -12,7 +12,8 @@ export default {
   },
 
   created() {
-    // console.log(this.$store);
+    // console.log(this.$store.getters['post/index/loading']);
+    // console.log(this.$store.state.post.index.loading);
   },
 };
 </script>

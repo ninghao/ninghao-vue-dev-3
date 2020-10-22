@@ -5,14 +5,16 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import { apiHttpClient } from '@/app/app.service';
 import PostListItem from './post-list-item.vue';
 
 export default {
-  data() {
-    return {
-      posts: [],
-    };
+  computed: {
+    ...mapGetters({
+      loading: 'post/index/loading',
+      posts: 'post/index/posts',
+    }),
   },
 
   created() {

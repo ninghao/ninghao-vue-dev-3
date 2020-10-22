@@ -5,4 +5,14 @@ export const postIndexStoreModule = {
     loading: false,
     posts: [],
   },
+
+  getters: {
+    loading(state) {
+      return state.loading;
+    },
+
+    posts(state) {
+      return state.posts;
+    },
+  },
 };
